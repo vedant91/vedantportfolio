@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vedant Yeole — AI/ML Engineer & Multi-Agent Systems Developer</title>
+  <meta name="description" content="Portfolio of Vedant Pramod Yeole — B.Tech CSE (AI & ML), multi-agent systems, cybersecurity, Datathon winner.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Particle Canvas -->
+<canvas id="particleCanvas"></canvas>
+
+<!-- Custom Cursor -->
+<div class="custom-cursor" id="customCursor"></div>
+<div class="custom-cursor-ring" id="customCursorRing"></div>
+<div class="cursor-trail-container" id="cursorTrail"></div>
+
+<div class="glow-orb glow-1"></div>
+<div class="glow-orb glow-2"></div>
+
+<!-- NAV -->
+<nav class="nav" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-name">VEDANT YEOLE</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#hackathons">Achievements</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Let's Talk</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="about">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">
+        <span class="pulse-dot"></span>
+        Open to Internship Opportunities
+      </div>
+      <h1>Building <span class="highlight">Intelligent Systems</span> That Solve Real Problems</h1>
+      <p class="hero-desc">
+        B.Tech CSE (AI & ML) student at PCU Pune. I build production-grade multi-agent AI systems, 
+        cybersecurity platforms, and full-stack applications. Datathon winner, CTF competitor, 
+        and hackathon veteran.
+      </p>
+      <div class="hero-metrics">
+        <div>
+          <div class="metric-val">12+</div>
+          <div class="metric-label">Projects</div>
+        </div>
+        <div>
+          <div class="metric-val">6</div>
+          <div class="metric-label">Hackathons</div>
+        </div>
+        <div>
+          <div class="metric-val">8.50</div>
+          <div class="metric-label">CGPA</div>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-accent">View Projects</a>
+        <a href="https://github.com/vedant91" target="_blank" class="btn-outline">GitHub Profile</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-container">
+        <div class="avatar-glow"></div>
+        <img src="profile_pic.jpg" alt="Vedant Yeole">
+        <div class="float-tag float-tag-1"><span class="tag-accent">Multi-Agent AI</span></div>
+        <div class="float-tag float-tag-2"><span class="tag-purple">Cybersecurity</span></div>
+        <div class="float-tag float-tag-3"><span class="tag-pink">Android Dev</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
+    <p class="sec-label reveal">Expertise</p>
+    <h2 class="sec-title reveal">Technical Stack</h2>
+    <p class="sec-desc reveal">From agent orchestration to mobile apps — building systems that matter.</p>
+
+    <!-- Radial Charts Overview Row -->
+    <div class="skills-overview reveal">
+      <div class="skills-overview-header">
+        <h3>Proficiency Overview</h3>
+        <span class="skills-overview-badge">Core Domains</span>
+      </div>
+      <div class="radial-charts-row">
+        <div class="radial-chart-item">
+          <div class="radial-chart" data-percent="95" data-color="var(--accent)">
+            <svg viewBox="0 0 120 120">
+              <circle class="radial-bg" cx="60" cy="60" r="52"/>
+              <circle class="radial-fill" cx="60" cy="60" r="52" stroke-dasharray="326.73" stroke-dashoffset="326.73"/>
+            </svg>
+            <div class="radial-value">
+              <span class="radial-num">0</span><span class="radial-pct">%</span>
+            </div>
+          </div>
+          <div class="radial-label">AI / ML</div>
+          <div class="radial-sublabel">Multi-Agent Systems</div>
+        </div>
+        <div class="radial-chart-item">
+          <div class="radial-chart" data-percent="92" data-color="var(--pink)">
+            <svg viewBox="0 0 120 120">
+              <circle class="radial-bg" cx="60" cy="60" r="52"/>
+              <circle class="radial-fill" cx="60" cy="60" r="52" stroke-dasharray="326.73" stroke-dashoffset="326.73"/>
+            </svg>
+            <div class="radial-value">
+              <span class="radial-num">0</span><span class="radial-pct">%</span>
+            </div>
+          </div>
+          <div class="radial-label">Security</div>
+          <div class="radial-sublabel">DAST & Pentesting</div>
+        </div>
+        <div class="radial-chart-item">
+          <div class="radial-chart" data-percent="90" data-color="var(--purple)">
+            <svg viewBox="0 0 120 120">
+              <circle class="radial-bg" cx="60" cy="60" r="52"/>
+              <circle class="radial-fill" cx="60" cy="60" r="52" stroke-dasharray="326.73" stroke-dashoffset="326.73"/>
+            </svg>
+            <div class="radial-value">
+              <span class="radial-num">0</span><span class="radial-pct">%</span>
+            </div>
+          </div>
+          <div class="radial-label">Backend</div>
+          <div class="radial-sublabel">Python & Flask</div>
+        </div>
+        <div class="radial-chart-item">
+          <div class="radial-chart" data-percent="75" data-color="var(--blue)">
+            <svg viewBox="0 0 120 120">
+              <circle class="radial-bg" cx="60" cy="60" r="52"/>
+              <circle class="radial-fill" cx="60" cy="60" r="52" stroke-dasharray="326.73" stroke-dashoffset="326.73"/>
+            </svg>
+            <div class="radial-value">
+              <span class="radial-num">0</span><span class="radial-pct">%</span>
+            </div>
+          </div>
+          <div class="radial-label">Mobile</div>
+          <div class="radial-sublabel">Android & Kotlin</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detail Cards Grid -->
+    <div class="skills-detail-grid">
+      <!-- AI Card -->
+      <div class="skill-detail-card reveal" data-color="accent">
+        <div class="skill-detail-top">
+          <div class="skill-icon-wrap skill-icon-accent">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="skill-detail-mini-chart" data-percent="95" data-color="var(--accent)">
+            <svg viewBox="0 0 48 48"><circle class="mini-bg" cx="24" cy="24" r="20"/><circle class="mini-fill" cx="24" cy="24" r="20" stroke-dasharray="125.66" stroke-dashoffset="125.66"/></svg>
+            <span class="mini-val">95</span>
+          </div>
+        </div>
+        <h3>AI / ML / Agents</h3>
+        <p>Multi-agent architectures, LLM integration, NLP pipelines, and intelligent automation.</p>
+        <div class="skill-bar-stack">
+          <div class="skill-bar-v3"><span class="bar-label">LLM Systems</span><div class="bar-track"><div class="bar-fill" data-width="95" style="--bar-color:var(--accent)"></div></div></div>
+          <div class="skill-bar-v3"><span class="bar-label">NLP</span><div class="bar-track"><div class="bar-fill" data-width="88" style="--bar-color:var(--purple)"></div></div></div>
+          <div class="skill-bar-v3"><span class="bar-label">ML Frameworks</span><div class="bar-track"><div class="bar-fill" data-width="80" style="--bar-color:var(--pink)"></div></div></div>
+        </div>
+        <div class="tags">
+          <span class="tag">LLM APIs</span><span class="tag">Multi-Agent</span><span class="tag">NLP</span>
+          <span class="tag">Scikit-learn</span><span class="tag">TensorFlow</span><span class="tag">RAG</span>
+        </div>
+      </div>
+
+      <!-- Cybersecurity Card -->
+      <div class="skill-detail-card reveal" data-color="pink">
+        <div class="skill-detail-top">
+          <div class="skill-icon-wrap skill-icon-pink">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="skill-detail-mini-chart" data-percent="92" data-color="var(--pink)">
+            <svg viewBox="0 0 48 48"><circle class="mini-bg" cx="24" cy="24" r="20"/><circle class="mini-fill" cx="24" cy="24" r="20" stroke-dasharray="125.66" stroke-dashoffset="125.66"/></svg>
+            <span class="mini-val">92</span>
+          </div>
+        </div>
+        <h3>Cybersecurity</h3>
+        <p>Automated DAST, vulnerability scanning, and AI-driven patch generation.</p>
+        <div class="skill-bar-stack">
+          <div class="skill-bar-v3"><span class="bar-label">DAST & Pentesting</span><div class="bar-track"><div class="bar-fill" data-width="92" style="--bar-color:var(--pink)"></div></div></div>
+          <div class="skill-bar-v3"><span class="bar-label">Network Security</span><div class="bar-track"><div class="bar-fill" data-width="85" style="--bar-color:var(--accent)"></div></div></div>
+        </div>
+        <div class="tags">
+          <span class="tag">DAST</span><span class="tag">Pentesting</span><span class="tag">nmap</span>
+          <span class="tag">sqlmap</span><span class="tag">OWASP</span>
+        </div>
+      </div>
+
+      <!-- Backend Card -->
+      <div class="skill-detail-card reveal" data-color="purple">
+        <div class="skill-detail-top">
+          <div class="skill-icon-wrap skill-icon-purple">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="skill-detail-mini-chart" data-percent="90" data-color="var(--purple)">
+            <svg viewBox="0 0 48 48"><circle class="mini-bg" cx="24" cy="24" r="20"/><circle class="mini-fill" cx="24" cy="24" r="20" stroke-dasharray="125.66" stroke-dashoffset="125.66"/></svg>
+            <span class="mini-val">90</span>
+          </div>
+        </div>
+        <h3>Backend & APIs</h3>
+        <p>RESTful APIs, orchestration layers, and backend systems.</p>
+        <div class="skill-bar-stack">
+          <div class="skill-bar-v3"><span class="bar-label">Python & Flask</span><div class="bar-track"><div class="bar-fill" data-width="90" style="--bar-color:var(--purple)"></div></div></div>
+          <div class="skill-bar-v3"><span class="bar-label">Database Design</span><div class="bar-track"><div class="bar-fill" data-width="82" style="--bar-color:var(--accent)"></div></div></div>
+        </div>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">REST</span>
+          <span class="tag">SQLite</span><span class="tag">asyncio</span>
+        </div>
+      </div>
+
+      <!-- Programming + Android + Tools Row -->
+      <div class="skill-detail-card skill-compact reveal" data-color="blue">
+        <div class="skill-detail-top">
+          <div class="skill-icon-wrap skill-icon-blue">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+          </div>
+          <div class="skill-detail-mini-chart" data-percent="75" data-color="var(--blue)">
+            <svg viewBox="0 0 48 48"><circle class="mini-bg" cx="24" cy="24" r="20"/><circle class="mini-fill" cx="24" cy="24" r="20" stroke-dasharray="125.66" stroke-dashoffset="125.66"/></svg>
+            <span class="mini-val">75</span>
+          </div>
+        </div>
+        <h3>Android Dev</h3>
+        <div class="tags"><span class="tag">Kotlin</span><span class="tag">Java</span><span class="tag">Firebase</span><span class="tag">Material UI</span></div>
+      </div>
+
+      <div class="skill-detail-card skill-compact reveal" data-color="accent">
+        <div class="skill-detail-top">
+          <div class="skill-icon-wrap skill-icon-accent">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="skill-detail-mini-chart" data-percent="88" data-color="var(--accent)">
+            <svg viewBox="0 0 48 48"><circle class="mini-bg" cx="24" cy="24" r="20"/><circle class="mini-fill" cx="24" cy="24" r="20" stroke-dasharray="125.66" stroke-dashoffset="125.66"/></svg>
+            <span class="mini-val">88</span>
+          </div>
+        </div>
+        <h3>Programming</h3>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">Kotlin</span><span class="tag">C/C++</span><span class="tag">DSA</span></div>
+      </div>
+
+      <div class="skill-detail-card skill-compact reveal" data-color="accent">
+        <div class="skill-detail-top">
+          <div class="skill-icon-wrap skill-icon-accent">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+          </div>
+          <div class="skill-detail-mini-chart" data-percent="78" data-color="var(--accent)">
+            <svg viewBox="0 0 48 48"><circle class="mini-bg" cx="24" cy="24" r="20"/><circle class="mini-fill" cx="24" cy="24" r="20" stroke-dasharray="125.66" stroke-dashoffset="125.66"/></svg>
+            <span class="mini-val">78</span>
+          </div>
+        </div>
+        <h3>Tools & DevOps</h3>
+        <div class="tags"><span class="tag">Git</span><span class="tag">Linux</span><span class="tag">Red Hat</span><span class="tag">Docker</span><span class="tag">VS Code</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner">
+    <p class="sec-label reveal">Featured Work</p>
+    <h2 class="sec-title reveal">Projects</h2>
+    <p class="sec-desc reveal">Production-grade AI systems built from scratch.</p>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-img"><img src="cyphex_inteface.jpeg" alt="CYPHEX Interface" loading="lazy"></div>
+        <div class="project-head">
+          <span class="proj-type proj-type-sec">CYBERSECURITY</span>
+          <a href="https://github.com/Vedant-ingle/CEP-" target="_blank" class="proj-link" title="GitHub">↗</a>
+        </div>
+        <div class="project-body">
+          <h3>CYPHEX — AI Cyber Security Platform</h3>
+          <p>Multi-agent cybersecurity platform with 10 specialized agents in a 5-stage pipeline. Real terminal execution (curl, nmap, sqlmap, hydra) with AI-driven vulnerability analysis and automated patch generation using asyncio subprocess orchestration.</p>
+          <div class="project-tech">
+            <span class="tag">Python</span><span class="tag">AI/ML</span><span class="tag">Multi-Agent</span>
+            <span class="tag">asyncio</span><span class="tag">nmap</span><span class="tag">sqlmap</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-img"><img src="Quntisense_interface.png" alt="Quantisense Interface" loading="lazy"></div>
+        <div class="project-head">
+          <span class="proj-type proj-type-ai">AI / MULTI-AGENT</span>
+          <a href="https://github.com/vedant91/Multi-agents" target="_blank" class="proj-link" title="GitHub">↗</a>
+        </div>
+        <div class="project-body">
+          <h3>Quantisense — Multi-Agent Credit Appraisal System</h3>
+          <p>Production-level architecture with 7 specialized agents: document parser, research agent, fraud-scanner, bull & bear analyst, stress-test agent, and chairman agent. LLM integration (Llama 3.1 8B) with token optimization.</p>
+          <div class="project-tech">
+            <span class="tag">Python</span><span class="tag">LLM APIs</span><span class="tag">Agent Orchestration</span>
+            <span class="tag">REST</span><span class="tag">Llama 3.1</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-img" onclick="openLightbox(this.querySelector('img').src)"><img src="Period_tracker_interface.png" alt="Period Tracker Interface" loading="lazy"></div>
+        <div class="project-head">
+          <span class="proj-type proj-type-fs">FULL-STACK AI</span>
+          <a href="https://github.com/vedant91/Period_Tracker" target="_blank" class="proj-link" title="GitHub">↗</a>
+        </div>
+        <div class="project-body">
+          <h3>Period Tracker — AI Health Chatbot & API</h3>
+          <p>Full-stack health system with NLP chatbot, intent detection across 10+ categories, 6+ RESTful endpoints, SQLite schema, automated cycle prediction, and Flask-CORS for Android connectivity.</p>
+          <div class="project-tech">
+            <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">NLP</span>
+            <span class="tag">SQLite</span><span class="tag">REST API</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-head">
+          <span class="proj-type proj-type-android">ANDROID</span>
+          <a href="https://github.com/vedant91" target="_blank" class="proj-link" title="GitHub">↗</a>
+        </div>
+        <div class="project-body">
+          <h3>Android Health & Lifestyle App</h3>
+          <p>Multi-screen native Android with fragment navigation, RecyclerView, responsive XML layouts, Firebase Realtime Database, and REST API integration via HTTP networking.</p>
+          <div class="project-tech">
+            <span class="tag">Kotlin</span><span class="tag">Java</span><span class="tag">Firebase</span>
+            <span class="tag">Material Design</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-img"><img src="CTms_interface.jpeg" alt="CTMS Interface" loading="lazy"></div>
+        <div class="project-head">
+          <span class="proj-type proj-type-fs">FULL-STACK</span>
+          <a href="https://github.com/vedant91" target="_blank" class="proj-link" title="GitHub">↗</a>
+        </div>
+        <div class="project-body">
+          <h3>CTMS — Central Training & Placement Management System</h3>
+          <p>Comprehensive training and placement management platform for tracking student data, placement drives, and training programs. Features role-based access, real-time dashboards, and automated reporting.</p>
+          <div class="project-tech">
+            <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Database</span><span class="tag">REST API</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-img"><img src="hand_rec.jpeg" alt="Hand Recognition" loading="lazy"></div>
+        <div class="project-head">
+          <span class="proj-type proj-type-ai">COMPUTER VISION</span>
+          <a href="https://github.com/vedant91" target="_blank" class="proj-link" title="GitHub">↗</a>
+        </div>
+        <div class="project-body">
+          <h3>Real-Time Hand Gesture Recognition</h3>
+          <p>Computer vision system for real-time hand gesture detection and recognition using MediaPipe and OpenCV. Supports multiple gestures with live webcam feed processing and custom gesture mapping.</p>
+          <div class="project-tech">
+            <span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">MediaPipe</span><span class="tag">ML</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- VISION — WHAT'S NEXT -->
+<section id="vision">
+  <div class="section-inner">
+    <p class="sec-label reveal">What I'm Building</p>
+    <h2 class="sec-title reveal">The CYPHEX Roadmap</h2>
+    <p class="sec-desc reveal">Three pillars that turn CYPHEX from a scanner into a living cyber defense system.</p>
+
+    <div class="vision-grid">
+      <div class="vision-card reveal">
+        <div class="vision-num">01</div>
+        <div class="vision-icon">🔌</div>
+        <h3>CYPHEX IoT — Edge Security Appliance</h3>
+        <p>A $200 plug-and-play hardware device (Raspberry Pi 5) that runs the entire 11-agent pipeline locally on your network. Zero cloud dependency. The AI brain (Llama 3.2 3B) runs on-device via Ollama — no code ever leaves your premises. Physical LED indicators show real-time security status. Continuous scan cycles every 1–6 hours with automated alerting.</p>
+        <div class="vision-tags">
+          <span class="tag">Raspberry Pi 5</span><span class="tag">Ollama</span><span class="tag">Edge AI</span><span class="tag">Zero Cloud</span>
+        </div>
+      </div>
+
+      <div class="vision-card reveal">
+        <div class="vision-num">02</div>
+        <div class="vision-icon">🧬</div>
+        <h3>Self-Learning Vulnerability Model</h3>
+        <p>An AI model that doesn't just scan — it learns. CYPHEX builds a per-endpoint "Behavioral Genome" of your application using Isolation Forest ML. It profiles what normal looks like (input patterns, response sizes, request rates) and blocks anything abnormal — even AI-generated zero-day attacks it has never seen before. Daily CVE feed ingestion keeps the model updated with new vulnerability patterns automatically.</p>
+        <div class="vision-tags">
+          <span class="tag">Isolation Forest</span><span class="tag">Anomaly Detection</span><span class="tag">CVE Auto-Patch</span><span class="tag">Behavioral ML</span>
+        </div>
+      </div>
+
+      <div class="vision-card reveal">
+        <div class="vision-num">03</div>
+        <div class="vision-icon">🛡️</div>
+        <h3>Future Goal — Application Immune System</h3>
+        <p>The endgame: CYPHEX becomes a full Application Immune System. A reverse proxy shield that sits in front of any web app, scoring every request in real-time (<1ms). When a vulnerability is confirmed, AI auto-generates a code patch and opens a GitHub PR — while the shield protects the app until the developer reviews. Every CYPHEX instance shares anonymized threat intelligence, creating herd immunity across all users.</p>
+        <div class="vision-tags">
+          <span class="tag">Reverse Proxy Shield</span><span class="tag">Auto-Patch PR</span><span class="tag">Herd Immunity</span><span class="tag"><1ms Inference</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ACHIEVEMENTS — VERTICAL TIMELINE -->
+<section id="hackathons">
+  <div class="section-inner">
+    <p class="sec-label reveal">Competition Track</p>
+    <h2 class="sec-title reveal">Achievements</h2>
+    <p class="sec-desc reveal">Competing and winning at national-level technical competitions.</p>
+  </div>
+  <div class="timeline-container">
+    <div class="timeline-line" id="timelineLine"></div>
+
+    <!-- Datathon -->
+    <div class="timeline-item timeline-left">
+      <div class="timeline-dot"><span class="timeline-dot-ping"></span></div>
+      <div class="timeline-card">
+        <div class="timeline-card-img">
+          <img src="datathon.jpg" alt="Datathon Winner" loading="lazy">
+          <span class="hack-badge badge-green">WINNER</span>
+        </div>
+        <div class="timeline-card-body">
+          <h3>Datathon</h3>
+          <p class="hack-meta">Data Science & Analytics Challenge</p>
+          <p>Won the competitive data science challenge demonstrating strong analytical skills under time pressure.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CREST CTF -->
+    <div class="timeline-item timeline-right">
+      <div class="timeline-dot"><span class="timeline-dot-ping"></span></div>
+      <div class="timeline-card">
+        <div class="timeline-card-img">
+          <img src="crest.jpg" alt="CREST CTF" loading="lazy">
+          <span class="hack-badge badge-purple">TOP 7 TEAM</span>
+        </div>
+        <div class="timeline-card-body">
+          <h3>CREST CTF</h3>
+          <p class="hack-meta">Capture The Flag — Cybersecurity</p>
+          <p>Secured Top 7th position solving challenges across web exploitation, cryptography, and reverse engineering.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech for Good -->
+    <div class="timeline-item timeline-left">
+      <div class="timeline-dot"><span class="timeline-dot-ping"></span></div>
+      <div class="timeline-card">
+        <div class="timeline-card-img">
+          <img src="WhatsApp Image 2026-05-03 at 3.49.12 PM.jpeg" alt="Tech for Good" loading="lazy">
+          <span class="hack-badge badge-gold">2ND RUNNER UP</span>
+        </div>
+        <div class="timeline-card-body">
+          <h3>Tech for Good Hackathon</h3>
+          <p class="hack-meta">Organized by IEEE</p>
+          <p>Secured 2nd Runner Up at the IEEE Tech for Good hackathon, building AI solutions with positive social impact.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIH -->
+    <div class="timeline-item timeline-right">
+      <div class="timeline-dot"><span class="timeline-dot-ping"></span></div>
+      <div class="timeline-card timeline-card-text">
+        <div class="timeline-card-body">
+          <span class="hack-inline-badge" style="background:rgba(16,185,129,0.15);color:#10b981;">CLEARED</span>
+          <h3>Smart India Hackathon</h3>
+          <p class="hack-meta">National-Level Technical Hackathon</p>
+          <p>Cleared the internal selection round for India's largest hackathon initiative.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Velora -->
+    <div class="timeline-item timeline-left">
+      <div class="timeline-dot"><span class="timeline-dot-ping"></span></div>
+      <div class="timeline-card">
+        <div class="timeline-card-img">
+          <img src="Screenshot 2026-05-06 235400.png" alt="Velora Hackathon" loading="lazy">
+          <span class="hack-badge badge-blue">NATIONAL LEVEL</span>
+        </div>
+        <div class="timeline-card-body">
+          <h3>Velora Hackathon</h3>
+          <p class="hack-meta">National-Level Technical Hackathon</p>
+          <p>Presented CYPHEX — the multi-agent cybersecurity platform — at the national level.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TechFiesta -->
+    <div class="timeline-item timeline-right">
+      <div class="timeline-dot"><span class="timeline-dot-ping"></span></div>
+      <div class="timeline-card">
+        <div class="timeline-card-img">
+          <img src="Screenshot 2026-05-06 235513.png" alt="TechFiesta" loading="lazy">
+          <span class="hack-badge badge-purple">NATIONAL LEVEL</span>
+        </div>
+        <div class="timeline-card-body">
+          <h3>TechFiesta</h3>
+          <p class="hack-meta">National-Level Hackathon</p>
+          <p>Competed in multi-domain challenges in AI, backend, and mobile development.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <p class="sec-label reveal">Get In Touch</p>
+    <h2 class="sec-title reveal">Let's Build Something</h2>
+    <p class="sec-desc reveal">Looking for AI/ML internships. Open to collaborations in cybersecurity, multi-agent systems, and full-stack.</p>
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <h3>Connect With Me</h3>
+        <p>I'm actively seeking internship roles in AI/ML, cybersecurity, and software engineering.</p>
+        <div class="contact-items">
+          <a href="mailto:vedantyeole0@gmail.com" class="contact-item">
+            <div class="contact-icon">✉</div>
+            <div><span>vedantyeole0@gmail.com</span><small>Email — fastest way to reach me</small></div>
+          </a>
+          <a href="https://github.com/vedant91" target="_blank" class="contact-item">
+            <div class="contact-icon">⟐</div>
+            <div><span>github.com/vedant91</span><small>12 repositories • All open source</small></div>
+          </a>
+          <a href="tel:+919284078848" class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div><span>+91 92840 78848</span><small>Available for calls</small></div>
+          </a>
+        </div>
+      </div>
+      <div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Your Email" required>
+          <input type="text" id="subject" placeholder="Subject">
+          <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="btn-accent" style="width:100%;border:none;cursor:pointer;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <img id="lightbox-img" src="" alt="Full preview">
+</div>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Ripple Container for Buttons -->
+<div class="ripple-container" id="rippleContainer"></div>
+
+<footer class="footer">
+  <div class="footer-socials">
+    <a href="https://github.com/vedant91" target="_blank">⟐</a>
+    <a href="mailto:vedantyeole0@gmail.com">✉</a>
+  </div>
+  <p>© 2026 Vedant Yeole. Built with passion for AI & security.</p>
+</footer>
+
+<script>
+// ─── SCROLL PROGRESS BAR ───
+const scrollBar = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  scrollBar.style.width = (window.scrollY / h * 100) + '%';
+});
+
+// ─── PARTICLE CANVAS ───
+const canvas = document.getElementById('particleCanvas');
+const ctx = canvas.getContext('2d');
+let particles = [];
+function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+for (let i = 0; i < 60; i++) {
+  particles.push({
+    x: Math.random() * canvas.width, y: Math.random() * canvas.height,
+    vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3,
+    r: Math.random() * 1.5 + 0.5, a: Math.random() * 0.3 + 0.05
+  });
+}
+function drawParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particles.forEach(p => {
+    p.x += p.vx; p.y += p.vy;
+    if (p.x < 0) p.x = canvas.width; if (p.x > canvas.width) p.x = 0;
+    if (p.y < 0) p.y = canvas.height; if (p.y > canvas.height) p.y = 0;
+    ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(200,255,0,${p.a})`; ctx.fill();
+  });
+  // Connect nearby particles
+  for (let i = 0; i < particles.length; i++) {
+    for (let j = i + 1; j < particles.length; j++) {
+      const dx = particles[i].x - particles[j].x;
+      const dy = particles[i].y - particles[j].y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 120) {
+        ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y);
+        ctx.lineTo(particles[j].x, particles[j].y);
+        ctx.strokeStyle = `rgba(200,255,0,${0.04 * (1 - dist / 120)})`;
+        ctx.lineWidth = 0.5; ctx.stroke();
+      }
+    }
+  }
+  requestAnimationFrame(drawParticles);
+}
+drawParticles();
+
+// ─── NAVBAR ───
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+
+// Hamburger
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// ─── ACTIVE NAV HIGHLIGHT ON SCROLL ───
+const sections = document.querySelectorAll('section[id]');
+const navItems = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY + 200;
+  sections.forEach(sec => {
+    const top = sec.offsetTop, h = sec.offsetHeight, id = sec.getAttribute('id');
+    if (scrollY >= top && scrollY < top + h) {
+      navItems.forEach(a => a.classList.remove('active-link'));
+      const active = document.querySelector(`.nav-links a[href="#${id}"]`);
+      if (active) active.classList.add('active-link');
+    }
+  });
+});
+
+// ─── STAGGERED REVEAL ───
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+let rd = 0;
+document.querySelectorAll('.reveal').forEach(el => {
+  el.style.transitionDelay = (rd % 6) * 0.08 + 's';
+  obs.observe(el); rd++;
+});
+
+// ─── HERO TEXT SPLIT REVEAL ───
+const heroTitle = document.querySelector('.hero h1');
+if (heroTitle) {
+  heroTitle.style.opacity = '1';
+  const words = heroTitle.innerHTML.split(/\s+/);
+  heroTitle.innerHTML = words.map((w, i) =>
+    `<span class="word-reveal" style="animation-delay:${i * 0.06}s">${w}</span>`
+  ).join(' ');
+}
+
+// ─── LIGHTBOX ───
+function openLightbox(src) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = src;
+  lb.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+document.querySelectorAll('.project-img').forEach(div => {
+  div.style.cursor = 'zoom-in';
+  if (!div.onclick) div.addEventListener('click', () => openLightbox(div.querySelector('img').src));
+});
+
+// ─── CURSOR GLOW ───
+const glow = document.getElementById('cursorGlow');
+let mx = 0, my = 0, gx = 0, gy = 0;
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+(function animGlow() {
+  gx += (mx - gx) * 0.12; gy += (my - gy) * 0.12;
+  glow.style.transform = `translate(${gx - 200}px, ${gy - 200}px)`;
+  requestAnimationFrame(animGlow);
+})();
+
+// ─── CUSTOM CURSOR ───
+const customCursor = document.getElementById('customCursor');
+const customCursorRing = document.getElementById('customCursorRing');
+let cursorX = 0, cursorY = 0, ringX = 0, ringY = 0;
+let cursorScale = 1, ringScale = 1;
+
+document.addEventListener('mousemove', e => {
+  cursorX = e.clientX;
+  cursorY = e.clientY;
+});
+
+(function animateCursor() {
+  ringX += (cursorX - ringX) * 0.15;
+  ringY += (cursorY - ringY) * 0.15;
+  customCursor.style.transform = `translate(${cursorX - 5}px, ${cursorY - 5}px) scale(${cursorScale})`;
+  customCursorRing.style.transform = `translate(${ringX - 20}px, ${ringY - 20}px) scale(${ringScale})`;
+  requestAnimationFrame(animateCursor);
+})();
+
+// Cursor interactions
+const hoverTargets = document.querySelectorAll('a, button, .project-card, .skill-card, .hack-card, .tag, input, textarea');
+hoverTargets.forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cursorScale = 0.5;
+    ringScale = 1.8;
+    customCursorRing.classList.add('cursor-hover');
+  });
+  el.addEventListener('mouseleave', () => {
+    cursorScale = 1;
+    ringScale = 1;
+    customCursorRing.classList.remove('cursor-hover');
+  });
+});
+
+document.addEventListener('mousedown', () => {
+  customCursor.classList.add('cursor-click');
+  customCursorRing.classList.add('cursor-click');
+});
+document.addEventListener('mouseup', () => {
+  customCursor.classList.remove('cursor-click');
+  customCursorRing.classList.remove('cursor-click');
+});
+
+// ─── CURSOR TRAIL ───
+const trailContainer = document.getElementById('cursorTrail');
+const trailDots = [];
+const TRAIL_LENGTH = 12;
+for (let i = 0; i < TRAIL_LENGTH; i++) {
+  const dot = document.createElement('div');
+  dot.className = 'trail-dot';
+  dot.style.opacity = (1 - i / TRAIL_LENGTH) * 0.5;
+  dot.style.width = dot.style.height = Math.max(3, 8 - i * 0.5) + 'px';
+  trailContainer.appendChild(dot);
+  trailDots.push({ el: dot, x: 0, y: 0 });
+}
+let trailMx = 0, trailMy = 0;
+document.addEventListener('mousemove', e => { trailMx = e.clientX; trailMy = e.clientY; });
+(function animTrail() {
+  let prevX = trailMx, prevY = trailMy;
+  trailDots.forEach((dot, i) => {
+    const speed = 0.35 - i * 0.02;
+    dot.x += (prevX - dot.x) * speed;
+    dot.y += (prevY - dot.y) * speed;
+    dot.el.style.transform = `translate(${dot.x - 4}px, ${dot.y - 4}px)`;
+    prevX = dot.x;
+    prevY = dot.y;
+  });
+  requestAnimationFrame(animTrail);
+})();
+
+// ─── BUTTON RIPPLE ───
+document.querySelectorAll('.btn-accent, .nav-cta, .proj-link').forEach(btn => {
+  btn.addEventListener('click', e => {
+    const ripple = document.createElement('span');
+    ripple.className = 'btn-ripple';
+    const r = btn.getBoundingClientRect();
+    ripple.style.left = (e.clientX - r.left) + 'px';
+    ripple.style.top = (e.clientY - r.top) + 'px';
+    btn.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 600);
+  });
+});
+
+// ─── TEXT SCRAMBLE ON SECTION TITLES ───
+class TextScramble {
+  constructor(el) { this.el = el; this.chars = '!<>-_\\/[]{}—=+*^?#________'; this.update = this.update.bind(this); }
+  setText(newText) {
+    const oldText = this.el.innerText;
+    const length = Math.max(oldText.length, newText.length);
+    const promise = new Promise(resolve => this.resolve = resolve);
+    this.queue = [];
+    for (let i = 0; i < length; i++) {
+      const from = oldText[i] || '';
+      const to = newText[i] || '';
+      const start = Math.floor(Math.random() * 30);
+      const end = start + Math.floor(Math.random() * 30);
+      this.queue.push({ from, to, start, end });
+    }
+    cancelAnimationFrame(this.frameRequest);
+    this.frame = 0;
+    this.update();
+    return promise;
+  }
+  update() {
+    let output = '', complete = 0;
+    for (let i = 0, n = this.queue.length; i < n; i++) {
+      let { from, to, start, end, char } = this.queue[i];
+      if (this.frame >= end) { complete++; output += to; }
+      else if (this.frame >= start) {
+        if (!char || Math.random() < 0.28) { char = this.chars[Math.floor(Math.random() * this.chars.length)]; this.queue[i].char = char; }
+        output += `<span class="scramble-char">${char}</span>`;
+      } else { output += from; }
+    }
+    this.el.innerHTML = output;
+    if (complete === this.queue.length) { this.resolve(); }
+    else { this.frameRequest = requestAnimationFrame(this.update); this.frame++; }
+  }
+}
+
+// Apply text scramble to section titles on reveal
+const scrambleObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const scrambler = new TextScramble(e.target);
+      scrambler.setText(e.target.dataset.text || e.target.innerText);
+      scrambleObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.sec-title').forEach(el => {
+  el.dataset.text = el.innerText;
+  scrambleObs.observe(el);
+});
+
+// ─── STAGGER SKILL TAGS ───
+const tagObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.tag').forEach((tag, i) => {
+        tag.style.animationDelay = (i * 0.06) + 's';
+        tag.classList.add('tag-pop');
+      });
+      tagObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.skill-detail-card, .project-card').forEach(card => tagObs.observe(card));
+
+// ─── 3D TILT ON PROJECT CARDS ───
+document.querySelectorAll('.project-card, .skill-detail-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    card.style.transform = `perspective(800px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg) translateY(-6px)`;
+  });
+  card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+});
+
+// ─── MAGNETIC BUTTON ───
+document.querySelectorAll('.btn-accent, .nav-cta').forEach(btn => {
+  btn.addEventListener('mousemove', e => {
+    const r = btn.getBoundingClientRect();
+    const x = e.clientX - r.left - r.width / 2;
+    const y = e.clientY - r.top - r.height / 2;
+    btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) scale(1.05)`;
+  });
+  btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+});
+
+// ─── PARALLAX GLOW ORBS ───
+window.addEventListener('scroll', () => {
+  const s = window.scrollY;
+  document.querySelector('.glow-1').style.transform = `translate(${s * 0.03}px, ${s * 0.05}px)`;
+  document.querySelector('.glow-2').style.transform = `translate(${-s * 0.02}px, ${-s * 0.04}px)`;
+});
+
+// ─── CONTACT FORM ───
+function handleSubmit(e) {
+  e.preventDefault();
+  const n=document.getElementById('name').value, em=document.getElementById('email').value,
+        s=document.getElementById('subject').value, m=document.getElementById('message').value;
+  window.location.href=`mailto:vedantyeole0@gmail.com?subject=${encodeURIComponent(s||'Portfolio Contact')}&body=${encodeURIComponent(`From: ${n} (${em})\n\n${m}`)}`;
+}
+
+// ─── SMOOTH SCROLL ───
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => { e.preventDefault(); document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'}); });
+});
+
+// ─── METRIC COUNT-UP ───
+const metricObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const el = e.target;
+      const raw = el.textContent.replace('+', '');
+      const isFloat = raw.includes('.'), num = parseFloat(raw), plus = el.textContent.includes('+');
+      const t0 = performance.now();
+      (function tick(now) {
+        const p = Math.min((now - t0) / 1200, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = (isFloat ? (num * eased).toFixed(2) : Math.floor(num * eased)) + (plus ? '+' : '');
+        if (p < 1) requestAnimationFrame(tick);
+      })(t0);
+      metricObs.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.metric-val').forEach(el => metricObs.observe(el));
+
+// ─── TIMELINE SCROLL REVEAL ───
+const timelineItems = document.querySelectorAll('.timeline-item');
+const timelineObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('timeline-visible');
+      timelineObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+timelineItems.forEach(item => timelineObs.observe(item));
+
+// Timeline line grow on scroll
+const timelineLine = document.getElementById('timelineLine');
+const timelineContainer = document.querySelector('.timeline-container');
+if (timelineLine && timelineContainer) {
+  window.addEventListener('scroll', () => {
+    const rect = timelineContainer.getBoundingClientRect();
+    const containerTop = rect.top;
+    const containerHeight = rect.height;
+    const viewportHeight = window.innerHeight;
+    if (containerTop < viewportHeight && containerTop + containerHeight > 0) {
+      const progress = Math.min(1, Math.max(0, (viewportHeight - containerTop) / (containerHeight + viewportHeight * 0.5)));
+      timelineLine.style.height = (progress * 100) + '%';
+    }
+  });
+}
+
+// ─── RADIAL CHART ANIMATION ───
+const CIRC = 2 * Math.PI * 52; // 326.73
+const MINI_CIRC = 2 * Math.PI * 20; // 125.66
+
+function animateRadial(chart) {
+  const pct = parseInt(chart.dataset.percent);
+  const color = chart.dataset.color;
+  const fill = chart.querySelector('.radial-fill');
+  const numEl = chart.querySelector('.radial-num');
+  if (fill) {
+    fill.style.stroke = color;
+    fill.style.strokeDashoffset = CIRC - (CIRC * pct / 100);
+  }
+  // Count up number
+  if (numEl) {
+    const t0 = performance.now();
+    (function tick(now) {
+      const p = Math.min((now - t0) / 1500, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      numEl.textContent = Math.floor(pct * eased);
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+}
+
+function animateMiniChart(chart) {
+  const pct = parseInt(chart.dataset.percent);
+  const color = chart.dataset.color;
+  const fill = chart.querySelector('.mini-fill');
+  if (fill) {
+    fill.style.stroke = color;
+    fill.style.strokeDashoffset = MINI_CIRC - (MINI_CIRC * pct / 100);
+  }
+}
+
+const radialObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      // Large radial charts
+      e.target.querySelectorAll('.radial-chart').forEach((ch, i) => {
+        setTimeout(() => animateRadial(ch), i * 250);
+      });
+      // Mini charts
+      e.target.querySelectorAll('.skill-detail-mini-chart').forEach((ch, i) => {
+        setTimeout(() => animateMiniChart(ch), i * 150);
+      });
+      // Bar fills
+      e.target.querySelectorAll('.bar-fill').forEach((bar, i) => {
+        setTimeout(() => { bar.style.width = bar.dataset.width + '%'; }, i * 200);
+      });
+      radialObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+const skillsSection = document.getElementById('skills');
+if (skillsSection) radialObs.observe(skillsSection);
+</script>
+</body>
+</html>
