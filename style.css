@@ -172,6 +172,7 @@ body::before {
 @keyframes rotateGlow { to { transform: rotate(360deg); } }
 .avatar-container img {
   width: 100%; height: 100%; border-radius: 50%; object-fit: cover;
+  object-position: center 20%;
   border: 3px solid var(--border); position: relative; z-index: 1;
 }
 .float-tag {
