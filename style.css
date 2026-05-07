@@ -1025,7 +1025,8 @@ section { position: relative; z-index: 1; padding: 7rem 3rem; }
   .timeline-left .timeline-dot, .timeline-right .timeline-dot { left: -8px; right: auto; }
 
   /* Hide performance-heavy elements on mobile but keep cursor */
-  .cursor-glow, .glow-orb { display: none; }
+  .cursor-glow { display: none !important; }
+  .glow-orb { display: none; }
 
   /* Footer */
   .footer { padding: 2rem 1.5rem; }
