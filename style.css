@@ -977,7 +977,10 @@ section { position: relative; z-index: 1; padding: 7rem 3rem; }
   .hero-actions { justify-content: center; }
   .hero-visual { order: -1; margin-bottom: 1rem; }
   .avatar-container { width: 200px; height: 200px; margin: 0 auto; }
-  .float-tag { display: none; }
+  .float-tag { font-size: 0.65rem; padding: 0.3rem 0.6rem; }
+  .float-tag-1 { top: 0; right: -10px; }
+  .float-tag-2 { bottom: 10%; left: -20px; }
+  .float-tag-3 { bottom: 0; right: -10px; }
   .nav-links { display: none; }
   .nav-cta { display: none; }
   .hamburger { display: flex; }
@@ -1021,9 +1024,8 @@ section { position: relative; z-index: 1; padding: 7rem 3rem; }
   .timeline-right { transform: translateY(30px); }
   .timeline-left .timeline-dot, .timeline-right .timeline-dot { left: -8px; right: auto; }
 
-  /* Hide desktop-only cursor effects */
-  .cursor-glow, .custom-cursor, .custom-cursor-ring, .cursor-trail-container { display: none !important; }
-  .glow-orb { display: none; }
+  /* Hide performance-heavy elements on mobile but keep cursor */
+  .cursor-glow, .glow-orb { display: none; }
 
   /* Footer */
   .footer { padding: 2rem 1.5rem; }
