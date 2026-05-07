@@ -19,12 +19,13 @@
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg); color: var(--text);
   overflow-x: hidden; line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  width: 100%; max-width: 100vw;
 }
 
 /* ─── NOISE OVERLAY ─── */
@@ -172,7 +173,7 @@ body::before {
 @keyframes rotateGlow { to { transform: rotate(360deg); } }
 .avatar-container img {
   width: 100%; height: 100%; border-radius: 50%; object-fit: cover;
-  object-position: center 20%;
+  object-position: center center;
   border: 3px solid var(--border); position: relative; z-index: 1;
 }
 .float-tag {
@@ -941,35 +942,77 @@ section { position: relative; z-index: 1; padding: 7rem 3rem; }
   100% { transform: translateX(100%); }
 }
 
+/* ─── PERFORMANCE: GPU HINTS ─── */
+.avatar-container img,
+.project-card,
+.skill-detail-card,
+.timeline-card,
+.vision-card {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* ─── REDUCE MOTION ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .scroll-progress { transition: none; }
+  #particleCanvas { display: none; }
+}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
   .hero, section { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .hero { padding-top: 7rem; padding-bottom: 3rem; min-height: auto; }
   .nav { padding: 1rem 1.5rem; }
+  .nav.scrolled { padding: 0.6rem 1.5rem; }
   .vision-grid { grid-template-columns: 1fr; }
-  .hero-inner { grid-template-columns: 1fr; text-align: center; }
-  .hero-desc { margin: 0 auto 2rem; }
-  .hero-metrics { justify-content: center; }
+  .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+  .hero-desc { margin: 0 auto 2rem; max-width: 100%; }
+  .hero-metrics { justify-content: center; gap: 2rem; }
   .hero-actions { justify-content: center; }
-  .hero-visual { order: -1; margin-bottom: 2rem; }
-  .avatar-container { width: 240px; height: 240px; }
+  .hero-visual { order: -1; margin-bottom: 1rem; }
+  .avatar-container { width: 200px; height: 200px; margin: 0 auto; }
   .float-tag { display: none; }
   .nav-links { display: none; }
+  .nav-cta { display: none; }
   .hamburger { display: flex; }
   .nav-links.open {
     display: flex; flex-direction: column;
     position: absolute; top: 100%; left: 0; right: 0;
     background: rgba(5,5,5,0.95); backdrop-filter: blur(20px);
     padding: 1.5rem; gap: 1rem; border-bottom: 1px solid var(--border);
+    z-index: 1001;
   }
+  .nav-links.open a { text-align: center; }
+
+  /* Section titles */
+  .sec-title { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+  .sec-desc { max-width: 100%; }
+
   /* Skills V3 responsive */
-  .skills-overview { padding: 1.5rem; }
-  .skills-overview-header { margin-bottom: 1.5rem; }
-  .radial-charts-row { gap: 1.2rem; }
-  .radial-chart { width: 85px; height: 85px; }
-  .radial-num { font-size: 1.15rem; }
+  .skills-overview { padding: 1.2rem; }
+  .skills-overview-header { margin-bottom: 1.5rem; flex-direction: column; gap: 0.8rem; align-items: flex-start; }
+  .radial-charts-row { gap: 1rem; justify-content: center; }
+  .radial-chart-item { min-width: 0; }
+  .radial-chart { width: 80px; height: 80px; }
+  .radial-num { font-size: 1.1rem; }
   .skills-detail-grid { grid-template-columns: 1fr; }
+  .skill-detail-card { padding: 1.2rem; }
+
+  /* Projects */
   .projects-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
+  .project-body h3 { font-size: 1.05rem; }
+  .project-img { height: 180px; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .contact-info h3 { font-size: 1.2rem; }
+
   /* Timeline mobile: single column */
   .timeline-container { padding: 2rem 0 2rem 1.5rem; }
   .timeline-line { left: 0; transform: none; }
@@ -977,6 +1020,59 @@ section { position: relative; z-index: 1; padding: 7rem 3rem; }
   .timeline-left { transform: translateY(30px); }
   .timeline-right { transform: translateY(30px); }
   .timeline-left .timeline-dot, .timeline-right .timeline-dot { left: -8px; right: auto; }
-  .cursor-glow, .custom-cursor, .custom-cursor-ring, .cursor-trail-container { display: none; }
+
+  /* Hide desktop-only cursor effects */
+  .cursor-glow, .custom-cursor, .custom-cursor-ring, .cursor-trail-container { display: none !important; }
+  .glow-orb { display: none; }
+
+  /* Footer */
+  .footer { padding: 2rem 1.5rem; }
+}
+
+/* ─── SMALL MOBILE ─── */
+@media (max-width: 480px) {
+  .hero, section { padding-left: 1rem; padding-right: 1rem; }
+  .nav { padding: 0.8rem 1rem; }
+  .nav.scrolled { padding: 0.5rem 1rem; }
+  .nav-name { font-size: 0.95rem; }
+  .hero h1 { font-size: clamp(1.8rem, 7vw, 2.5rem); letter-spacing: -1px; }
+  .hero-desc { font-size: 0.9rem; }
+  .hero-metrics { gap: 1.5rem; }
+  .metric-val { font-size: 1.6rem; }
+  .metric-label { font-size: 0.6rem; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .btn-accent, .btn-outline { width: 100%; text-align: center; }
+  .avatar-container { width: 160px; height: 160px; }
+
+  .radial-charts-row { gap: 0.5rem; }
+  .radial-chart { width: 65px; height: 65px; }
+  .radial-num { font-size: 0.95rem; }
+  .radial-label { font-size: 0.72rem; }
+  .radial-sublabel { font-size: 0.55rem; }
+
+  .skill-detail-card { padding: 1rem; }
+  .bar-label { min-width: 70px; font-size: 0.6rem; }
+  .tags { gap: 0.25rem; }
+  .tag { font-size: 0.6rem; padding: 0.15rem 0.4rem; }
+
+  .vision-card { padding: 1.4rem 1.2rem; }
+  .vision-card h3 { font-size: 0.95rem; }
+  .vision-card p { font-size: 0.78rem; }
+  .vision-num { font-size: 3.5rem; }
+
+  .timeline-container { padding: 1.5rem 0 1.5rem 1rem; }
+  .timeline-item { padding: 0.6rem 0 0.6rem 1.5rem; }
+  .timeline-card-img { height: 140px; }
+  .timeline-card-body { padding: 1rem; }
+  .timeline-card-body h3 { font-size: 0.95rem; }
+
+  .contact-form input, .contact-form textarea { padding: 0.75rem 0.9rem; font-size: 0.85rem; }
+  .contact-item { padding: 0.7rem 0.9rem; }
+  .contact-item span { font-size: 0.8rem; }
+
+  .footer { padding: 1.5rem 1rem; }
+  .footer p { font-size: 0.7rem; }
+
+  .section-inner { max-width: 100%; }
 }
 
